@@ -15,11 +15,22 @@ public class Ticket {
 		this.listado = listado;
 	}
 	
-	public void mostrar() {
+	/*public void mostrar() {
 		for (Integer c  : listado.keySet()) {
 			System.out.println(c+"."+listado.get(c));
 			
 			
+		}
+	}*/
+	public void mostrarTicket() {
+		Iterator<LineaVenta> it = listado.values().iterator();
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("Cantidad \t Producto \t Precio Unit \t Precio Final");
+		LineaVenta lv;
+		while(it.hasNext()) {
+			lv=it.next();
+			System.out.println(lv.getCantidad() +"\t\t" + lv.getP().getNombre() + "\t\t" 
+		+ lv.getP().getPrecioUni() + "\t \t "+lv.calacularLinea());
 		}
 	}
 	public void agregar(Integer i,LineaVenta lv) {

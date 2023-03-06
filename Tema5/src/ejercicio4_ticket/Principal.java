@@ -18,7 +18,7 @@ public class Principal {
 		double porcentajeIva=0.0;
 		double porcentaje=0.0;
 		
-		Ticket t = null;
+		Ticket t;
 		
 		Map <Integer,LineaVenta> listado=new HashMap <Integer,LineaVenta>();
 		int masuno=1;
@@ -43,7 +43,7 @@ public class Principal {
 		op=Leer.datoInt();
 		switch (op) {
 		case 1:
-			t.mostrar();
+			t.mostrarTicket();
 			break;
 		case 2:
 			System.out.println(t.calacularImporteTotal(porcentajeIva, porcentaje));
@@ -54,7 +54,7 @@ public class Principal {
 			break;
 		case 4:
 			System.out.println("eliga");
-			t.mostrar();
+			t.mostrarTicket();
 			idMap=Leer.datoInt();
 			System.out.println("precio nuevo");
 			precioNuevo=Leer.datoDouble();

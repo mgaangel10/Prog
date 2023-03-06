@@ -1,5 +1,7 @@
 package ejercicio4_ticket;
 
+import java.util.Objects;
+
 public class Producto implements Comparable<Producto> {
 	private double precioUni;
 	private String nombre;
@@ -44,12 +46,15 @@ public class Producto implements Comparable<Producto> {
 		return "Producto [precioUni=" + precioUni + ", nombre=" + nombre + ", codigo=" + codigo + "]";
 	}
 	//metodo ordenar por precio
-
 	@Override
 	public int compareTo(Producto o) {
 		// TODO Auto-generated method stub
-		return 0;
+		String nombre=o.getNombre();
+		String nombre2=this.nombre;
+		
+		return -(nombre.toLowerCase().compareTo(nombre2));
 	}
+
 	
 	
 	

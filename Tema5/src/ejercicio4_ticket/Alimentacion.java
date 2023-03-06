@@ -16,6 +16,7 @@ public class Alimentacion extends Producto {
 			return total=super.calcualrPrecio()-rebaja;
 		} else {
 			return super.getPrecioUni();
+		
 		}
 	}
 	public double getRebaja() {
@@ -32,7 +33,7 @@ public class Alimentacion extends Producto {
 	}
 	@Override
 	public String toString() {
-		return "Alimentacion [rebaja=" + rebaja + ", diasCad=" + diasCad + "]";
+		return super.toString()+"Alimentacion [rebaja=" + rebaja + ", diasCad=" + diasCad + "]";
 	}
 	
 	
