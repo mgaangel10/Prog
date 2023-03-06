@@ -32,7 +32,7 @@ public class Ropa extends Producto {
 	}
 	@Override
 	public String toString() {
-		return "Ropa [lujosa=" + lujosa + ", masDinero=" + masDinero + "]";
+		return super.toString()+"Ropa [lujosa=" + lujosa + ", masDinero=" + masDinero + "]";
 	}
 	
 	

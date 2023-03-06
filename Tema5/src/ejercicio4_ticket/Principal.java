@@ -17,19 +17,21 @@ public class Principal {
 		double precioNuevo=0.0;
 		double porcentajeIva=0.0;
 		double porcentaje=0.0;
-		LineaVenta lv;
-		lv=new LineaVenta(new Producto(100,"hola",100),3);
+		
+		Ticket t = null;
+		
 		Map <Integer,LineaVenta> listado=new HashMap <Integer,LineaVenta>();
 		int masuno=1;
 		Integer idMap = masuno;
 		listado.put(idMap, new LineaVenta(new Ropa(100,"nike",1,true,5),2));
-		
+		idMap++;
 		listado.put(idMap, new LineaVenta(new Ropa(200,"kike",2,false,4),1));
-	
-		listado.put(idMap, new LineaVenta(new Alimentacion(300,"kalvo kien?",3,5,1),3));
+		idMap++;
+		listado.put(idMap, new LineaVenta(new Alimentacion(300,"adidas",3,5,1),3));
+		idMap++;
 	
 		
-		Ticket t;
+		
 		t=new Ticket(listado);
 		do {
 			System.out.println("menu");
@@ -53,8 +55,10 @@ public class Principal {
 		case 4:
 			System.out.println("eliga");
 			t.mostrar();
+			idMap=Leer.datoInt();
 			System.out.println("precio nuevo");
 			precioNuevo=Leer.datoDouble();
+			t.editPrecioUni(precioNuevo, idMap);
 			
 			break;
 		case 5:

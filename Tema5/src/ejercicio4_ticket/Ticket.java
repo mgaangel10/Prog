@@ -16,8 +16,9 @@ public class Ticket {
 	}
 	
 	public void mostrar() {
-		for (LineaVenta lv: listado.values() ) {
-			System.out.println(listado.get(lv));
+		for (Integer c  : listado.keySet()) {
+			System.out.println(c+"."+listado.get(c));
+			
 			
 		}
 	}
@@ -36,8 +37,9 @@ public class Ticket {
 		}
 		return null;
 	}
-	public void editPrecioUni(LineaVenta lv,double nuevoPrecio) {
-		lv.getP().setPrecioUni(nuevoPrecio);
+	public void editPrecioUni(double nuevoPrecio,Integer id) {
+		
+		listado.get(id).getP().setPrecioUni(nuevoPrecio);
 		
 	}
 	public void eliminar(Integer id) {
