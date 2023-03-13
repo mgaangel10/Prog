@@ -11,19 +11,37 @@ public class Principal {
 		int d=4;
 		double total;
 		
+			do {
+				
+				try {
+			
 			System.out.println("numerador");
 		num=Leer.datoInt();
-		do {
+		
 		System.out.println("denominador");
 		d=Leer.datoInt();
-		if (d==0) {
-			System.out.println("introduzca uotro num distinto de cero");
-		}
-		} while (d==0);
-		
-		
-		total=num/d;
+			total=num/d;
 		System.out.println(total);
+		}
+		catch(ArithmeticException e) {
+				
+				System.err.println("has metido un letra ");
+			}
+		
+		catch(Exception e) {
+			System.err.println("esta dividiendo por ceroo");
+			
+		}
+			} while (d==0);
+		
+		
+		
+			
+				
+		
+		
+		
+		
 	}
 
 }
