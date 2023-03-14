@@ -6,9 +6,9 @@ import java.util.SortedMap;
 
 public class GestionJugador {
 	
-	private Map<Jugador,Equipo> lista;
+	private SortedMap<Jugador,Equipo> lista;
 
-	public GestionJugador(Map<Jugador, Equipo> lista) {
+	public GestionJugador(SortedMap<Jugador, Equipo> lista) {
 		super();
 		this.lista = lista;
 	}
@@ -44,6 +44,9 @@ public class GestionJugador {
 		return null;
 	}
 	
+	public void lsqlw() {
+		
+	}
 	
 	
 
@@ -51,7 +54,7 @@ public class GestionJugador {
 		return lista;
 	}
 
-	public void setLista(Map<Jugador, Equipo> lista) {
+	public void setLista(SortedMap<Jugador, Equipo> lista) {
 		this.lista = lista;
 	}
 
