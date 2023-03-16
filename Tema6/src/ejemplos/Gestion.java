@@ -10,11 +10,22 @@ public class Gestion {
 		super();
 		this.lista = lista;
 	}
+	
 
 	public SortedMap<Integer, Equipo> getLista() {
 		return lista;
+		
 	}
-
+	public void headMap(Integer i,Equipo e) {
+		System.out.println(lista.headMap(i));
+	}
+	public void subMap(Integer i,Equipo e) {
+		System.out.println(lista.subMap(i, i));
+	}
+	public void tailMap(Integer i) {
+		System.out.println(lista.tailMap(i));
+		
+	}
 	public void setLista(SortedMap<Integer, Equipo> lista) {
 		this.lista = lista;
 	}
