@@ -1,6 +1,6 @@
 package ejemplos;
 
-public class Jugador {
+public class Jugador implements Comparable<Jugador>{
 	private String nombre;
 	private int edad; 
 	private String posicion;
@@ -40,6 +40,13 @@ public class Jugador {
 	public String toString() {
 		return "Jugador [nombre=" + nombre + ", edad=" + edad + ", posicion=" + posicion + ", Nacionalidad="
 				+ Nacionalidad + "]";
+	}
+	@Override
+	public int compareTo(Jugador o) {
+		// TODO Auto-generated method stub
+		
+		return (o.getNombre().toLowerCase().compareTo(this.nombre.toLowerCase()));
+		
 	}
 	
 	

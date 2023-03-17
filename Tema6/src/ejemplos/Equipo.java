@@ -1,19 +1,22 @@
 package ejemplos;
 
+import java.util.List;
+
 public class Equipo {
 	
-	private Jugador j;
+	private List<Jugador> list;
 	private String nombre;
-	public Equipo(Jugador j, String nombre) {
+	
+	public Equipo(List<Jugador> list, String nombre) {
 		super();
-		this.j = j;
+		this.list = list;
 		this.nombre = nombre;
 	}
-	public Jugador getJ() {
-		return j;
+	public List<Jugador> getList() {
+		return list;
 	}
-	public void setJ(Jugador j) {
-		this.j = j;
+	public void setList(List<Jugador> list) {
+		this.list = list;
 	}
 	public String getNombre() {
 		return nombre;
@@ -23,8 +26,9 @@ public class Equipo {
 	}
 	@Override
 	public String toString() {
-		return "Equipo [j=" + j + ", nombre=" + nombre + "]";
+		return "Equipo [list=" + list + ", nombre=" + nombre + "]";
 	}
+	
 
 	
 	

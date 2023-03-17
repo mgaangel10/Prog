@@ -1,5 +1,7 @@
 package ejemplos;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -9,15 +11,35 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		SortedMap<Integer,Equipo>lista=new TreeMap<>();
+		List<Jugador> list= new ArrayList<Jugador>();
+		List<Jugador>list2= new ArrayList<Jugador>();
+		List<Jugador>list3= new ArrayList<Jugador>();
 		Gestion g;
 		Integer i;
+		TreeMap tree;
 		//añadimos elementos en el sortedMap
 		Jugador j = new Jugador ("Andy Cook",35,"mc","ingles");
-		Jugador j1= new Jugador("Lionel Messi",36,"dc","argentino");
 		Jugador j2= new Jugador("Magico gonzalez",60,"dc","salvadoreño");
-		Equipo e = new Equipo (j,"Bradford city");
-		Equipo e1 = new Equipo (j1,"Psg");
-		Equipo e2 = new Equipo (j,"Cadiz fc");
+		Jugador j1= new Jugador("Lionel Messi",36,"dc","argentino");
+		list.add(j);
+		list.add(j1);
+		list.add(j2);
+		Jugador j3 = new Jugador ("Fernando claro",19,"mco","pelirrojo");
+		Jugador j4= new Jugador("Rodri marina",18,"dc","español");
+		Jugador j5= new Jugador("Kameni",40,"por","nose");
+		list2.add(j3);
+		list2.add(j4);
+		list2.add(j5);
+		Jugador j6 = new Jugador ("Cristiano Ronaldo",34,"ed","Portuges");
+		Jugador j7= new Jugador("Pedri",20,"mc","español");
+		Jugador j8= new Jugador("Gavi",18,"mc","español");
+		list3.add(j6);
+		list3.add(j7);
+		list3.add(j8);
+		
+		Equipo e = new Equipo (list,"Bradford city");
+		Equipo e1 = new Equipo (list2,"Psg");
+		Equipo e2 = new Equipo (list3,"Cadiz fc");
 		lista.put(1, e);
 		lista.put(2, e1);
 		lista.put(3, e2);
@@ -26,6 +48,12 @@ public class Principal {
 		System.out.println("los muestra");
 		for(Integer k: lista.keySet()) {
 			System.out.println(k+". "+lista.get(k));
+		}
+		System.out.println("ordenar alfabeticamenta");
+		tree= new TreeMap<Integer,Equipo>();
+		lista.putAll(g.getLista());
+		for(Equipo eq:lista.values()) {
+			System.out.println(lista.values());
 		}
 		System.out.println("headMap");
 		g.headMap(2, e1);
