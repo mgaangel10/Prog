@@ -16,7 +16,7 @@ public class Principal {
 		List<Jugador>list3= new ArrayList<Jugador>();
 		Gestion g;
 		Integer i;
-		TreeMap tree;
+		
 		//añadimos elementos en el sortedMap
 		Jugador j = new Jugador ("Andy Cook",35,"mc","ingles");
 		Jugador j2= new Jugador("Magico gonzalez",60,"dc","salvadoreño");
@@ -49,18 +49,31 @@ public class Principal {
 		for(Integer k: lista.keySet()) {
 			System.out.println(k+". "+lista.get(k));
 		}
-		System.out.println("ordenar alfabeticamenta");
-		tree= new TreeMap<Integer,Equipo>();
+		System.out.println("ordenar alfabeticamente");
+		
 		lista.putAll(g.getLista());
 		for(Equipo eq:lista.values()) {
-			System.out.println(lista.values());
+			System.out.println(eq.getList());
 		}
+		
+		
 		System.out.println("headMap");
 		g.headMap(2, e1);
 		System.out.println("subMap");
 		g.subMap(2, e1);
 		System.out.println("tailMap");
 		g.tailMap(2);
+		System.out.println("size :");
+		g.size();
+		System.out.println("contains : ");
+		g.containts(1);
+		System.out.println("lastkey :");
+		g.lastKey();
+		System.out.println("entryset :");
+		g.entrySet();
+		System.out.println("values :");
+		g.values();
+		
 		
 
 	}

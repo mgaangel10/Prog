@@ -1,6 +1,7 @@
 package ejemplos;
 
 public class Jugador implements Comparable<Jugador>{
+	
 	private String nombre;
 	private int edad; 
 	private String posicion;

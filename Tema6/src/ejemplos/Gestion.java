@@ -26,6 +26,21 @@ public class Gestion {
 		System.out.println(lista.tailMap(i));
 		
 	}
+	public void size() {
+		lista.size();
+	}
+	public void containts(Integer i) {
+		lista.containsKey(i);
+	}
+	public void lastKey() {
+		lista.lastKey();
+	}
+	public void entrySet() {
+		lista.entrySet();
+	}
+	public void values() {
+		lista.values();
+	}
 	public void setLista(SortedMap<Integer, Equipo> lista) {
 		this.lista = lista;
 	}
