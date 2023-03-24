@@ -87,8 +87,7 @@ public class MiMusica {
 	}
 
 	
-	
-	public void mostrar() {
+	public void mostrar() {  
 		for(Cancion c: listado) {
 			System.out.println(c);
 		}
@@ -99,12 +98,17 @@ public class MiMusica {
 		for(Cancion c:listado) {
 			suma+=c.getDuracion();
 			total=suma/listado.size();
+			
+			
+			
+			
 		}
 		return total;
 	}
 	public void edit(Cancion c,String interprete) {
 		listado.indexOf(findByNombre(interprete));
 		System.out.println();
+		
 		
 	}
 	public void imprimirBuscado(String titulo) {

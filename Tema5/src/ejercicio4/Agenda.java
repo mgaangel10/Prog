@@ -12,18 +12,30 @@ public Agenda(Map<Contacto, Integer> listado) {
 	super();
 	this.listado = listado;
 }
-
+/**
+ * 
+ * @param c
+ * @param num
+ * @return c
+ * @return num
+ */
 public void agregar(Contacto c,Integer num) {
 	listado.put(c, num);
 }
 
-//esto saca la clave y el valor
+
+
 public void mostrar() {
 	for (Contacto c: listado.keySet() ) {
-		System.out.println(listado.get(c));
-		System.out.println(c);
+		System.out.println(c+", número de teléfono: "+listado.get(c));
+		
 	}
 }
+/**
+ * 
+ * @param id
+ * @return c
+ */
 public Contacto findById(int id) {
 	boolean encontrado;	
 	Contacto c;
@@ -37,7 +49,11 @@ public Contacto findById(int id) {
 	}
 	return null;
 }
-
+/**
+ * 
+ * @param id
+ * @return list
+ */
 public void eliminar(int id) {
 	listado.remove(findById(id));
 }

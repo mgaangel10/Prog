@@ -10,6 +10,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		List <DatosPersonal> d = new ArrayList <DatosPersonal>();
+		
 		d.add(new DatosPersonal("c","pepe",39));
 		 d.add(new DatosPersonal("e","garfia",10));
 		  d.add(new DatosPersonal("a","perez",19));

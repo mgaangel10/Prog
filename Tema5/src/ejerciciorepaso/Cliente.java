@@ -1,6 +1,6 @@
 package ejerciciorepaso;
 
-public class Cliente {
+public class Cliente implements Comparable<Cliente>{
 	
 	private double saldo;
 	private String nombre;
@@ -45,6 +45,16 @@ public class Cliente {
 	public String toString() {
 		return "Cliente [saldo=" + saldo + ", nombre=" + nombre + ", dni=" + dni + ", edad=" + edad + "]";
 	}
+
+
+	@Override
+	public int compareTo(Cliente o) {
+		// TODO Auto-generated method stub
+		return -(o.getNombre().toLowerCase().compareTo(this.getNombre().toLowerCase()));
+	}
+
+
+	
 	
 	
 	

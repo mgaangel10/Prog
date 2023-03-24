@@ -5,29 +5,29 @@ import java.util.Map;
 
 public class Oficina {
 	
-	private Map<Integer,Cuenta> listado;
+	private Map<Cliente, Cuenta> listado;
 	
 	
 	
 	
-	public Oficina(Map<Integer, Cuenta> listado) {
+	public Oficina(Map<Cliente, Cuenta> listado) {
 		super();
 		this.listado = listado;
 	}
 	
-	public void agregar(Integer id,Cuenta c) {
+	public void agregar(Cliente id,Cuenta c) {
 		listado.put(id, c);
 	}
 
 	public void mostrarCuenta() {
-		for (Integer c: listado.keySet()) {
+		for (Cliente c: listado.keySet()) {
 			System.out.println(listado.get(c));
 		}
 	}
 	
 	public double calcularSueldosTotales() {
 		double importeTotal=0.0;
-		for(Integer d:listado.keySet()) {
+		for(Cliente d:listado.keySet()) {
 			importeTotal+=listado.get(d).calcularSaldo();
 		}
 		return importeTotal;
@@ -47,17 +47,17 @@ public class Oficina {
 		return null;
 	}
 	
-	public void editPrecio(Integer id,double precioN) {
-		listado.get(id).getC().setSaldo(precioN);
+	public void editPrecio(double precioN,String nombre) {
+		listado.get(findBy(nombre)).getC().setSaldo(precioN);;
 	}
 	
 	
 
-	public Map<Integer, Cuenta> getListado() {
+	public Map<Cliente, Cuenta> getListado() {
 		return listado;
 	}
 
-	public void setListado(Map<Integer, Cuenta> listado) {
+	public void setListado(Map<Cliente, Cuenta> listado) {
 		this.listado = listado;
 	}
 

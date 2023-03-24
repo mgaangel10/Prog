@@ -1,5 +1,7 @@
 package ejerciciorepaso;
 
+import java.util.Objects;
+
 public class Cuenta {
 	
 	private Cliente c;
@@ -28,6 +30,12 @@ public class Cuenta {
 	public String toString() {
 		return "Cuenta [c=" + c + "]";
 	}
+
+	
+
+	
+	
+
 	
 	
 
