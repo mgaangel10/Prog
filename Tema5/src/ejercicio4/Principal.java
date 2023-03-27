@@ -9,9 +9,9 @@ import java.util.TreeMap;
 
 import utilidades.Leer;
 /**
- * 
+ * Este programa gestiona una agenda de contactos pudiendo añadir,eliminar,buscar y ordenar
  * @author Admin
- *
+ *@version 2.1
  */
 public class Principal {
 

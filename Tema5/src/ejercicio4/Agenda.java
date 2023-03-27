@@ -3,9 +3,15 @@ package ejercicio4;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
+/**
+ * Esta clase se utiliza para gestionar todos los Contactos
+ * Como atributos tenemos un map como clave Contacto y valor un Integer
+ * @author Admin
+ *
+ */
 
 public class Agenda implements Comparator<Contacto>{
-//	la clave no se pueded repetir en este caso es Contacto y el valor es Integer
+
 	private Map<Contacto,Integer> listado;
 
 public Agenda(Map<Contacto, Integer> listado) {
@@ -13,17 +19,21 @@ public Agenda(Map<Contacto, Integer> listado) {
 	this.listado = listado;
 }
 /**
- * 
- * @param c
- * @param num
- * @return c
- * @return num
+ * agrega un contacto
+ * @param contacto 
+ * @param Integer
+ * @param no devuelve nada
+ *
  */
 public void agregar(Contacto c,Integer num) {
 	listado.put(c, num);
 }
 
-
+/**
+ * muestra todos los contactos
+ * @param no hay parametro
+ * @return devuelve todos los contactos
+ */
 
 public void mostrar() {
 	for (Contacto c: listado.keySet() ) {
@@ -32,10 +42,11 @@ public void mostrar() {
 	}
 }
 /**
- * 
+ * busqueda de un Contacto
  * @param id
- * @return c
+ * @return devuelve un Contacto 
  */
+
 public Contacto findById(int id) {
 	boolean encontrado;	
 	Contacto c;
@@ -49,11 +60,7 @@ public Contacto findById(int id) {
 	}
 	return null;
 }
-/**
- * 
- * @param id
- * @return list
- */
+
 public void eliminar(int id) {
 	listado.remove(findById(id));
 }

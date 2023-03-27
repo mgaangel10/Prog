@@ -1,6 +1,12 @@
 package ejercicio4;
 
 import java.util.Objects;
+/**
+ * Esta es una clase que representa un objeto "Contacto"
+ * Contiene informacion como el id,nombre,correo
+ * @author Admin
+ *
+ */
 
 public class Contacto implements Comparable <Contacto>{
 	private int id;
@@ -35,7 +41,11 @@ public class Contacto implements Comparable <Contacto>{
 	public String toString() {
 		return "Contacto [id=" + id + ", nombre=" + nombre + ", correo=" + correo + "]";
 	}
-	//el hash code se pone cuando vamos a utilizar una coleccion de hashmap
+	/**
+	 * se utiliza para identificar y buscar objetos de manera mas eficiente
+	 * @param no hay
+	 * 
+	 */
 	
 	@Override
 	public int hashCode() {
