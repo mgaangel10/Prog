@@ -39,9 +39,9 @@ public class Main {
 		
 		e.buscarPosicion(posicion);
 	
-		System.out.println("editar nombre");
-		nuevoNombre=s.next();
-		e.EditarNombre(nuevoNombre, j4);
+		System.out.println("editar posicion");
+	
+	
 		e.listarJugadores();
 		
 		

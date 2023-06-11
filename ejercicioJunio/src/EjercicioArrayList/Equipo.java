@@ -44,14 +44,14 @@ public class Equipo {
 		}
 		return null;
 	}
+	
+	
+	
+	
 	public void imprimirBuscado(String nombre) {
 		System.out.println(FindByNombre(nombre));
 	}
 	
-	public void EditarNombre(String nombre,Jugador j) {
-		j.setNombre(nombre);
-		
-	}
 	
 	public void OrdenarPorPosicion() {
 		
